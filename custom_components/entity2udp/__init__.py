@@ -19,6 +19,7 @@ from .management import async_setup_management
 
 _LOGGER = logging.getLogger(__name__)
 PLATFORMS = ["button"]
+CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
 
 
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
