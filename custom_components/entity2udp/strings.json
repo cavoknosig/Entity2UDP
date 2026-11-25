@@ -1,0 +1,182 @@
+{
+  "title": "Entity2UDP",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add UDP destination",
+        "data": {
+          "name": "Destination name",
+          "host": "Host or IP",
+          "port": "UDP port",
+          "invalid_value": "Fallback value",
+          "min_interval_seconds": "Default minimum interval (seconds)",
+          "startup_resync": "Resend after HA startup"
+        },
+        "data_description": {
+          "invalid_value": "The number sent when an entity is unavailable or its state cannot be converted."
+        }
+      }
+    },
+    "error": {
+      "invalid_destination": "Enter a valid destination name and host"
+    },
+    "abort": {
+      "already_configured": "This host and port are already configured"
+    },
+    "initiate_flow": {
+      "user": "Add UDP destination"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Entity2UDP settings",
+        "description": "[Open the Entity2UDP management panel](/entity2udp) to manage destinations and configured entities.",
+        "menu_options": {
+          "sidebar": "Sidebar visibility",
+          "legacy": "Classic configuration"
+        }
+      },
+      "destination": {
+        "title": "Edit destination",
+        "data": {
+          "name": "Name",
+          "host": "Host",
+          "port": "Port",
+          "invalid_value": "Fallback value",
+          "min_interval_seconds": "Default minimum interval (seconds)",
+          "startup_resync": "Resend after HA startup"
+        },
+        "data_description": {
+          "invalid_value": "The number sent when an entity is unavailable or its state cannot be converted."
+        }
+      },
+      "add_entity": {
+        "title": "Add entity export",
+        "data": {
+          "entity_id": "Entity",
+          "key": "UDP key",
+          "type": "Value type",
+          "scale": "Scale factor",
+          "precision": "Decimal places",
+          "min_interval_seconds": "Minimum update interval (seconds)",
+          "min_delta": "Minimum numeric change",
+          "invalid_value": "Fallback value"
+        },
+        "data_description": {
+          "invalid_value": "The number sent when an entity is unavailable or its state cannot be converted.",
+          "min_interval_seconds": "Use -1 for the destination default, or 0 for no limit."
+        },
+        "sections": {
+          "translation_settings": {
+            "name": "State translations",
+            "data": {
+              "translation_rows": "Mappings"
+            },
+            "data_description": {
+              "translation_rows": "Add one row per Home Assistant state. Auto mode defaults for covers are closed = 0, open = 1, opening = 2, closing = 3. Your mappings override those defaults."
+            }
+          }
+        }
+      },
+      "edit_entity": {
+        "title": "Choose entity to edit",
+        "data": {
+          "entity_id": "Entity"
+        }
+      },
+      "edit_details": {
+        "title": "Edit entity export",
+        "data": {
+          "key": "UDP key",
+          "type": "Value type",
+          "scale": "Scale factor",
+          "precision": "Decimal places",
+          "min_interval_seconds": "Minimum update interval (seconds)",
+          "min_delta": "Minimum numeric change",
+          "invalid_value": "Fallback value"
+        },
+        "data_description": {
+          "invalid_value": "The number sent when an entity is unavailable or its state cannot be converted.",
+          "min_interval_seconds": "Use -1 for the destination default, or 0 for no limit."
+        },
+        "sections": {
+          "translation_settings": {
+            "name": "State translations",
+            "data": {
+              "translation_rows": "Mappings"
+            },
+            "data_description": {
+              "translation_rows": "Add one row per Home Assistant state. Auto mode defaults for covers are closed = 0, open = 1, opening = 2, closing = 3. Your mappings override those defaults."
+            }
+          }
+        }
+      },
+      "remove_entity": {
+        "title": "Remove entity export",
+        "data": {
+          "entity_id": "Entity to remove"
+        }
+      },
+      "import_json": {
+        "title": "Import entity rules",
+        "description": "Paste an exported destination's JSON object containing schema_version and entities. Choose merge or replace.",
+        "data": {
+          "mode": "Import mode",
+          "json_data": "JSON"
+        }
+      },
+      "export_json": {
+        "title": "Export entity rules (JSON)",
+        "description": "**Export entity rules (JSON)**\n\nCopy the saved rules below, or use Download rules JSON in the destination grid.",
+        "data": {
+          "json_data": "Saved rules JSON"
+        }
+      },
+      "sidebar": {
+        "title": "Sidebar visibility",
+        "description": "This setting applies to the whole integration. The management panel is still available from Devices & Services when the sidebar shortcut is hidden.",
+        "data": {
+          "show_in_sidebar": "Show Entity2UDP in the sidebar"
+        }
+      },
+      "legacy": {
+        "title": "Classic configuration",
+        "menu_options": {
+          "destination": "Edit destination",
+          "add_entity": "Add entity",
+          "edit_entity": "Edit entity",
+          "remove_entity": "Remove entity",
+          "import_json": "Import entity rules (JSON)",
+          "export_json": "Export entity rules (JSON)"
+        }
+      }
+    },
+    "error": {
+      "invalid_destination": "Invalid destination",
+      "already_exists": "Entity is already configured",
+      "invalid_json": "Invalid JSON",
+      "invalid_rule": "Invalid entity rule",
+      "invalid_key": "Invalid UDP key",
+      "duplicate_key": "UDP keys must be unique",
+      "invalid_translations": "Use a unique source state in each row and a valid value for the selected type.",
+      "invalid_sentinel": "Invalid numeric sentinel",
+      "invalid_scale": "Invalid scale",
+      "invalid_interval": "Invalid interval",
+      "invalid_delta": "Invalid delta",
+      "invalid_type": "Invalid value type",
+      "invalid_precision": "Invalid precision",
+      "invalid_import": "Invalid import file"
+    },
+    "abort": {
+      "no_entities": "No entities configured yet"
+    }
+  },
+  "entity": {
+    "button": {
+      "resync": {
+        "name": "Resend all values"
+      }
+    }
+  }
+}

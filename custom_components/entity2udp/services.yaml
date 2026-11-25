@@ -1,0 +1,26 @@
+sync_all:
+  name: Resend all values
+  description: Resend the latest values to one or all destinations.
+  fields:
+    destination:
+      name: Destination entry ID
+      description: Leave empty for all destinations.
+      required: false
+      selector:
+        text:
+export_config:
+  name: Export configuration
+  description: Write selected destination and entity rules to /config/entity2udp_export.json.
+  fields:
+    destination:
+      name: Destination entry ID
+      required: false
+      selector:
+        text:
+    entities:
+      name: Entities
+      description: Optional entity subset; leave empty for all.
+      required: false
+      selector:
+        entity:
+          multiple: true

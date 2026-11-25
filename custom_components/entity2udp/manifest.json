@@ -1,0 +1,20 @@
+{
+  "domain": "entity2udp",
+  "name": "Entity2UDP",
+  "after_dependencies": [
+    "logbook"
+  ],
+  "codeowners": [
+    "@cavoknosig"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "panel_custom",
+    "websocket_api"
+  ],
+  "documentation": "https://github.com/cavoknosig/Entity2UDP",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/cavoknosig/Entity2UDP/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
