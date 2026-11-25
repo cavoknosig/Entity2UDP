@@ -60,7 +60,7 @@ class ManagementPanel:
                     'embed_iframe': False,
                     'trust_external': False,
                     'handle_safe_area': False,
-                    'module_url': '/entity2udp_static/entity2udp-panel.js?v=1.0.0',
+                    'module_url': '/entity2udp_static/entity2udp-panel.js?v=1.0.1',
                 },
             },
         )

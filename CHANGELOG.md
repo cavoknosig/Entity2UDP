@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+- Added the Hubs & protocols category for Home Assistant Marketplace.
+
 ## 1.0.0
 
 First packaged 1.0 release of Entity2UDP.

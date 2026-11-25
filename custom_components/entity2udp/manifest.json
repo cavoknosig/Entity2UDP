@@ -4,6 +4,9 @@
   "after_dependencies": [
     "logbook"
   ],
+  "categories": [
+    "hubs_protocols"
+  ],
   "codeowners": [
     "@cavoknosig"
   ],
@@ -17,5 +20,5 @@
   "iot_class": "local_push",
   "issue_tracker": "https://github.com/cavoknosig/Entity2UDP/issues",
   "requirements": [],
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
